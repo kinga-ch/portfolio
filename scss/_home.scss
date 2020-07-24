@@ -1,0 +1,50 @@
+.home {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-image: url(../img/bg1a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+    &__bg-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        &--none {
+            display: none;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 200px solid $green-color;
+            border-right: 300px solid transparent;
+            opacity: 0.3;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 0;
+            width: 0;
+            border-bottom: 200px solid $green-color;
+            border-left: 300px solid transparent;
+            opacity: 0.3;
+
+        }
+    }

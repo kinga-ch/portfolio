@@ -1,0 +1,125 @@
+.menu {
+    position: fixed;
+    width: 100%;
+    background-color: $first-gray;
+    height: 8%;
+    padding: 0 20px;
+    box-shadow: 2px 2px 4px rgb(30, 30, 30);
+    z-index: 2;
+
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: $green-color;
+            border-radius: 5px;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                background-color: $green-color;
+                border-radius: 5px;
+            }
+
+            &::before {
+                transform: translateY(-8px);
+            }
+
+            &::after {
+                transform: translateY(8px);
+            }
+        }
+
+        // BURGER ANIMATION
+        &.open {
+            & .menu__btn--span {
+                background-color: transparent;
+            }
+
+            & .menu__btn--span::before {
+                transform: rotate(45deg);
+                transform: translate(35px -35px);
+            }
+
+            & .menu__btn--span::after {
+                transform: rotate(-45deg);
+                transform: translate(35px 35px);
+            }
+        }
+    }
+
+    &__logo-circle {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        transform: translateY(-50%);
+        background-color: $second-gray;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: $green-color;
+        font-family: $secondary-font;
+        cursor: pointer;
+        font-size: 1.3rem;
+        font-weight: 200;
+    }
+
+    &__nav {
+        position: fixed;
+        top: 8%;
+        left: 0;
+        transform: translateX(-100%);
+        width: 100%;
+        background-color: rgba(49, 49, 49, 0.9);
+        transition: .5s;
+        border-top: 1px solid rgb(30, 30, 30);
+
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style: none;
+        text-align: center;
+        margin: 20px auto;
+
+        &--item {
+            line-height: 30px;
+        }
+
+        &--link {
+            display: block;
+            color: $green-color;
+            font-size: 1.3rem;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15% 15px 15%;
+            border-bottom: 3px solid $green-color;
+        }
+    }
+
+    &__nav.open {
+        transform: translateX(0);
+    }
+}

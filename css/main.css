@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  min-height: 200vh;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  background-color: #313131;
+  height: 8%;
+  padding: 0 20px;
+  -webkit-box-shadow: 2px 2px 4px #1e1e1e;
+          box-shadow: 2px 2px 4px #1e1e1e;
+  z-index: 2;
+}
+
+.menu__btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu__btn--span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #0d8c5b;
+  border-radius: 5px;
+}
+
+.menu__btn--span::before, .menu__btn--span::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #0d8c5b;
+  border-radius: 5px;
+}
+
+.menu__btn--span::before {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.menu__btn--span::after {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+.menu__btn.open .menu__btn--span {
+  background-color: transparent;
+}
+
+.menu__btn.open .menu__btn--span::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform: translate(35px -35px);
+          transform: translate(35px -35px);
+}
+
+.menu__btn.open .menu__btn--span::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform: translate(35px 35px);
+          transform: translate(35px 35px);
+}
+
+.menu__logo-circle {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #3C3C3C;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #0d8c5b;
+  font-family: "Pacifico", cursive;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+.menu__nav {
+  position: fixed;
+  top: 8%;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  width: 100%;
+  background-color: rgba(49, 49, 49, 0.9);
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-top: 1px solid #1e1e1e;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style: none;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.menu__list--item {
+  line-height: 30px;
+}
+
+.menu__list--link {
+  display: block;
+  color: #0d8c5b;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 15% 15px 15%;
+  border-bottom: 3px solid #0d8c5b;
+}
+
+.menu__nav.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.home {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/bg1a.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home__bg-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.home__bg-filter--none {
+  display: none;
+}
+
+.home__bg-filter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 200px solid #0d8c5b;
+  border-right: 300px solid transparent;
+  opacity: 0.3;
+}
+
+.home__bg-filter::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  border-bottom: 200px solid #0d8c5b;
+  border-left: 300px solid transparent;
+  opacity: 0.3;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,22 @@
+$primary-font:'Roboto',
+sans-serif;
+$secondary-font:'Pacifico',
+cursive;
+$green-color: #0d8c5b;
+$primary-font-color:#DCDCDC;
+$first-gray:#313131;
+$second-gray:#3C3C3C;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+    font-family: $primary-font;
+    min-height: 200vh;
+
+}

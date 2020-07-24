@@ -1,0 +1,32 @@
+// break points
+
+// tiny screen >460px;
+
+
+// // small screen > 640px;
+// @media only screen and (min-width: 640px) {
+//     @include nav\@screen_small;
+// }
+
+// Medium screen > 768px
+@media only screen and (min-width: 768px) {
+    @include nav\@screen_medium;
+    // @include home\@screen_medium;
+    // @include make\@screen_medium;
+}
+
+// // large screen > 850px;
+// @media only screen and (min-width:850px) {
+//     @include nav\@screen_large;
+// }
+
+// wide screen > 1024px
+// @media only screen and (min-width: 1024px) {
+//     @include nav\@screen_wide;
+//     @include home\@screen_wide;
+// }
+
+// mega screen > 1280px;
+// @media only screen and (min-width:1280px) {
+//     @include home\@screen_mega;
+// }
