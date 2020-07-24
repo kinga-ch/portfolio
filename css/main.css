@@ -219,7 +219,7 @@ body {
 }
 
 .home__h1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 1.4px;
 }
@@ -236,17 +236,17 @@ body {
   width: auto;
   background-color: #0d8c5b;
   margin-top: 18px;
-  margin-left: 30px;
-  margin-right: 80px;
+  margin-left: 50px;
+  margin-right: 100px;
   -webkit-box-shadow: 1px 1px 4px gray;
           box-shadow: 1px 1px 4px gray;
 }
 
 .home__line:nth-last-of-type(1) {
-  margin: 12px 30px 12px 80px;
+  margin: 12px 50px 12px 100px;
 }
 
 .home__p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=main.css.map */
