@@ -1,6 +1,7 @@
 const menuBtn = document.querySelector('.menu__btn');
 let menuOpen = false;
 const nav = document.querySelector('.menu__nav');
+const menuLinks = [...document.querySelectorAll('.menu__list--link')];
 
 //Ikona Burger Menu
 menuBtn.addEventListener("click", () => {
@@ -14,4 +15,10 @@ menuBtn.addEventListener("click", () => {
     nav.classList.toggle('open');
 })
 
-// Rozwijane Menu
+//Podkreślenie wybranej przez użytkownika pozycji menu
+function linkSelection() {
+    menuLinks.forEach(link => link.classList.remove('active'));
+    this.classList.add('active');
+}
+
+menuLinks.forEach(link => link.addEventListener('click', linkSelection));

@@ -5,10 +5,9 @@
           box-sizing: border-box;
 }
 
-body {
+html {
   font-size: 10px;
-  font-family: "Roboto", sans-serif;
-  min-height: 200vh;
+  font-family: "Open Sans", sans-serif;
 }
 
 .menu {
@@ -102,7 +101,7 @@ body {
   color: #0d8c5b;
   font-family: "Pacifico", cursive;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 200;
 }
 
@@ -113,7 +112,7 @@ body {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   width: 100%;
-  background-color: rgba(49, 49, 49, 0.9);
+  background-color: #3C3C3C;
   -webkit-transition: .5s;
   transition: .5s;
   border-top: 1px solid #1e1e1e;
@@ -132,7 +131,7 @@ body {
           justify-content: space-evenly;
   list-style: none;
   text-align: center;
-  margin: 20px auto;
+  padding: 15px 0;
 }
 
 .menu__list--item {
@@ -141,13 +140,36 @@ body {
 
 .menu__list--link {
   display: block;
+  font-size: 2rem;
+  line-height: 8rem;
   color: #0d8c5b;
-  font-size: 1.3rem;
+  text-shadow: 0.5px 0.5px 2px;
   letter-spacing: 1.5px;
   text-decoration: none;
-  padding: 10px;
-  margin: 0 15% 15px 15%;
-  border-bottom: 3px solid #0d8c5b;
+}
+
+.menu__list--link::after {
+  content: "";
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.menu__list--link.active::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #0d8c5b;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 
 .menu__nav.open {
@@ -156,11 +178,11 @@ body {
 }
 
 .home {
-  position: absolute;
+  position: relative;
   top: 8%;
   left: 0;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url(../img/bg1a.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -185,7 +207,7 @@ body {
 .home__bg-filter::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 8%;
   left: 0;
   width: 0;
   height: 0;
@@ -219,9 +241,9 @@ body {
 }
 
 .home__h1 {
-  font-size: 1.6rem;
+  font-size: 2.8rem;
   font-weight: 400;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.5px;
 }
 
 .home__h1--span {
@@ -238,15 +260,85 @@ body {
   margin-top: 18px;
   margin-left: 50px;
   margin-right: 100px;
-  -webkit-box-shadow: 1px 1px 4px gray;
-          box-shadow: 1px 1px 4px gray;
+  -webkit-box-shadow: 2px 2px 6px gray;
+          box-shadow: 2px 2px 6px gray;
 }
 
 .home__line:nth-last-of-type(1) {
-  margin: 12px 50px 12px 100px;
+  margin: 16px 50px 16px 100px;
 }
 
 .home__p {
-  font-size: 1.2rem;
+  font-size: 2rem;
+}
+
+.about-me {
+  position: relative;
+  background-color: #1e1e1e;
+  color: #DCDCDC;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.about-me__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.about-me__photo-wrap {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  background-image: url(../img/ja1.JPG);
+  background-position: center;
+  background-size: cover;
+  margin: 70px auto 40px;
+}
+
+.about-me__h1 {
+  font-size: 2.6rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  position: relative;
+}
+
+.about-me__h1::before {
+  content: "";
+  position: absolute;
+  top: 130%;
+  left: -25%;
+  height: 3px;
+  border-radius: 25px;
+  width: 100%;
+  background-color: #0d8c5b;
+}
+
+.about-me__h1::after {
+  content: "";
+  position: absolute;
+  top: 180%;
+  right: -25%;
+  width: 100%;
+  height: 3px;
+  border-radius: 25px;
+  background-color: #0d8c5b;
+}
+
+.about-me__description {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 1px;
 }
 /*# sourceMappingURL=main.css.map */

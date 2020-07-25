@@ -78,7 +78,7 @@
         color: $green-color;
         font-family: $secondary-font;
         cursor: pointer;
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         font-weight: 200;
     }
 
@@ -88,11 +88,9 @@
         left: 0;
         transform: translateX(-100%);
         width: 100%;
-        background-color: rgba(49, 49, 49, 0.9);
+        background-color: $second-gray;
         transition: .5s;
         border-top: 1px solid rgb(30, 30, 30);
-
-
     }
 
     &__list {
@@ -101,7 +99,8 @@
         justify-content: space-evenly;
         list-style: none;
         text-align: center;
-        margin: 20px auto;
+        padding: 15px 0;
+        // box-shadow: 4px 4px 8px black;
 
         &--item {
             line-height: 30px;
@@ -109,13 +108,31 @@
 
         &--link {
             display: block;
+            font-size: 2rem;
+            line-height: 8rem;
             color: $green-color;
-            font-size: 1.3rem;
+            text-shadow: 0.5px 0.5px 2px;
             letter-spacing: 1.5px;
             text-decoration: none;
-            padding: 10px;
-            margin: 0 15% 15px 15%;
-            border-bottom: 3px solid $green-color;
+
+            &::after {
+                content: "";
+                transform: scale(0);
+                transition: .3s linear;
+                transform: translateY(-4px);
+            }
+
+            &.active::after {
+                content: "";
+                display: block;
+                height: 3px;
+                background-color: $green-color;
+                width: 80%;
+                text-align: center;
+                margin: 0 auto;
+                transform: scale(1);
+                transform: translateY(-4px);
+            }
         }
     }
 

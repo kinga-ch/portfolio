@@ -1,5 +1,7 @@
-$primary-font:'Roboto',
+$primary-font:'Open Sans',
 sans-serif;
+// $primary-font:'Arial',
+// sans-serif;
 $secondary-font:'Pacifico',
 cursive;
 $green-color: #0d8c5b;
@@ -7,6 +9,11 @@ $primary-font-color:#DCDCDC;
 $first-gray:#313131;
 $second-gray:#3C3C3C;
 
+@mixin headers-font-style {
+    font-size: 2.6rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
 
 * {
     margin: 0;
@@ -14,9 +21,7 @@ $second-gray:#3C3C3C;
     box-sizing: border-box;
 }
 
-body {
+html {
     font-size: 10px;
     font-family: $primary-font;
-    min-height: 200vh;
-
 }
