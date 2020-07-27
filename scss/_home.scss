@@ -11,7 +11,6 @@
     background-attachment: fixed;
     padding: 0 25px;
 
-
     &__bg-filter {
         position: absolute;
         top: 0;
@@ -20,9 +19,6 @@
         width: 100%;
         background-color: rgba(0, 0, 0, 0.6);
 
-        &--none {
-            display: none;
-        }
 
         &::before {
             content: "";
@@ -34,6 +30,11 @@
             border-top: 150px solid $green-color;
             border-right: 250px solid transparent;
             opacity: 0.3;
+
+            @media (min-width:768px) {
+                border-top: 250px solid $green-color;
+                border-right: 350px solid transparent;
+            }
         }
 
         &::after {
@@ -46,6 +47,11 @@
             border-bottom: 150px solid $green-color;
             border-left: 250px solid transparent;
             opacity: 0.3;
+
+            @media (min-width:768px) {
+                border-bottom: 250px solid $green-color;
+                border-left: 350px solid transparent;
+            }
         }
     }
 
@@ -58,6 +64,10 @@
         color: $primary-font-color;
         min-width: 300px;
         text-shadow: 1px 1px 4px $green-color;
+
+        @media (min-width:768px) {
+            min-width: 500px;
+        }
     }
 
     &__h1 {
@@ -65,11 +75,19 @@
         font-weight: 400;
         letter-spacing: 1.5px;
 
-        &--span {
-            color: $green-color;
-            font-weight: 600;
-            text-shadow: 1px 1px 2px $primary-font-color;
+        @media (min-width:768px) {
+            font-size: 4rem;
         }
+
+        @media (min-width:1380px) {
+            font-size: 5rem;
+        }
+    }
+
+    &__span {
+        color: $green-color;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px $primary-font-color;
     }
 
     &__line {
@@ -85,9 +103,21 @@
         &:nth-last-of-type(1) {
             margin: 16px 50px 16px 100px;
         }
+
+        @media (min-width:768px) {
+            margin-top: 20px;
+        }
     }
 
     &__p {
         font-size: 2rem;
+
+        @media (min-width:768px) {
+            font-size: 2.6rem;
+        }
+
+        @media (min-width:1380px) {
+            font-size: 3rem;
+        }
     }
 }

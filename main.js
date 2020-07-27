@@ -1,7 +1,7 @@
 const menuBtn = document.querySelector('.menu__btn');
 let menuOpen = false;
 const nav = document.querySelector('.menu__nav');
-const menuLinks = [...document.querySelectorAll('.menu__list--link')];
+const menuLinks = [...document.querySelectorAll('.menu__link')];
 
 //Ikona Burger Menu
 menuBtn.addEventListener("click", () => {
